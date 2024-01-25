@@ -27,6 +27,8 @@ ARG VARIABLE
 # Set the working directory
 WORKDIR /app
 
+RUN ls /app/target/
+
 # Copy the JAR file from the build stage
 COPY --from=build /app/target/st2dce-$VARIABLE.jar app.jar
 
