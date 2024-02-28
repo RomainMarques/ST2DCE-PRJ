@@ -46,7 +46,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy in devlopment') {
+        stage('Deploy in development') {
             steps {
                 sh 'kubectl create namespace development'
                 sh 'kubectl config set-context --current --namespace=development'
